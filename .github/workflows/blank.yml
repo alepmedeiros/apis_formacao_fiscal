@@ -14,12 +14,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3                    
 
-    - name: Build project
-      run: |
-        mv *.* ../
-        cd apis_formacao_fiscal/EmissaoMicroservice
-        build.bat EmissaoMicroservice.dproj
-
   #   - name: Compile EmissaoMicroservice
   #     run: cp build.bat EmissaoMicroservice/ ;; cd EmissaoMicroservice ;; boss i ;; .\build.bat . "EmissaoMicroservice.dproj"
 
