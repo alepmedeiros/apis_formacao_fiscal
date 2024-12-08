@@ -15,6 +15,7 @@ type
     FDispatcher: TEventDispatcher;
   protected
     procedure EmitirDocumento(Req: THorseRequest; Res: THorseResponse);
+    procedure TesteActions(Req: THorseRequest; Res: THorseResponse);
   public
     class function New: TEmissaoController;
 
@@ -54,7 +55,14 @@ begin
   FDispatcher.Subscribe('DocumentoEmitido', LDocumentoHandler.Handle);
 
   THorse
-    .Post('/emitir', EmitirDocumento);
+    .Post('/emitir', EmitirDocumento)
+    .Get('/awsteste', TesteActions);
+end;
+
+procedure TEmissaoController.TesteActions(Req: THorseRequest;
+  Res: THorseResponse);
+begin
+  Res.Status(200).Send('Teste de validação remota');
 end;
 
 end.

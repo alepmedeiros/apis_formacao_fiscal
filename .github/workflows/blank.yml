@@ -54,7 +54,7 @@ jobs:
       run: |
         echo "$SSH_KEY" > ssh_key.pem
         chmod 400 ssh_key.pem
-        scp EmissaoMicroservice.exe ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
+        scp EmissaoMicroservice ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
         ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop emissao.service && sudo systemctl start emissao.service"
 
     - name: Deploy AuthMicroservice
@@ -65,5 +65,5 @@ jobs:
       run: |
         echo "$SSH_KEY" > ssh_key.pem
         chmod 400 ssh_key.pem
-        scp AuthMicroservice.exe ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
+        scp AuthMicroservice ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
         ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop auth.service && sudo systemctl start auth.service"
