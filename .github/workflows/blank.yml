@@ -18,8 +18,12 @@ jobs:
       run: dir
       shell: cmd
 
+    - name: Executando o boss para instalar as dependecias
+      run: cd EmissaoMicroservice ;; boss i
+      shell: cmd
+
     - name: Compile EmissaoMicroservice
-      run: cd EmissaoMicroservice ;; ..\build.bat . "EmissaoMicroservice.dproj"
+      run: .\build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
 
     - name: Compile AuthMicroservice
       run: build.bat "AuthMicroservice" "AuthMicroservice.dproj"
