@@ -12,9 +12,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3     
-      with:
-        path: apis               
+      uses: actions/checkout@v3                    
         
     - name: Move files to correct location
       run: |
