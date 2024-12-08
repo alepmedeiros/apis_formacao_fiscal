@@ -12,7 +12,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3                                                  
+      uses: actions/checkout@v3     
+      with:
+        path: apis                                             
 
     - name: Compile EmissaoMicroservice
       run: cp build.bat EmissaoMicroservice/ ;; cd EmissaoMicroservice ;; boss i ;; .\build.bat . "EmissaoMicroservice.dproj"
