@@ -19,7 +19,7 @@ jobs:
       shell: cmd
 
     - name: Compile EmissaoMicroservice
-      run: cd EmissaoMicroservice ;; .\build.bat .s "EmissaoMicroservice.dproj"
+      run: cd EmissaoMicroservice ;; ..\build.bat . "EmissaoMicroservice.dproj"
 
     - name: Compile AuthMicroservice
       run: build.bat "AuthMicroservice" "AuthMicroservice.dproj"
