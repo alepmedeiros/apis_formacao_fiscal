@@ -19,7 +19,7 @@ jobs:
       shell: cmd
 
     - name: Executando o boss para instalar as dependecias
-      run: cd EmissaoMicroservice ;; boss i
+      run: cd EmissaoMicroservice ;; c:\boss\boss.exe i
       shell: cmd
 
     - name: Compile EmissaoMicroservice
