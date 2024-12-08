@@ -62,7 +62,7 @@ end;
 procedure TEmissaoController.TesteActions(Req: THorseRequest;
   Res: THorseResponse);
 begin
-  Res.Status(200).Send('Teste de validação remota aws');
+  Res.Status(200).Send('Teste de validação remota');
 end;
 
 end.
