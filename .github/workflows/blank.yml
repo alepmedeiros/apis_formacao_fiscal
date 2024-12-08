@@ -14,6 +14,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Listar arquivos no diretório
+      run: dir
+      shell: cmd
+
     - name: Compile EmissaoMicroservice
       run: build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
 
