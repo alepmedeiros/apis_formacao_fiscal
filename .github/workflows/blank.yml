@@ -14,6 +14,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Configurar política de execução do PowerShell
+      run: Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+      shell: pwsh
+
     - name: Compile EmissaoMicroservice
       run: build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
 
