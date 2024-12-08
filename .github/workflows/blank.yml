@@ -13,13 +13,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3                    
-        
-    - name: Move files to correct location
-      run: |
-        mv apis/* apis_formacao_fiscal/
 
     - name: Build project
       run: |
+        mv *.* ../
         cd apis_formacao_fiscal/EmissaoMicroservice
         build.bat EmissaoMicroservice.dproj
 
