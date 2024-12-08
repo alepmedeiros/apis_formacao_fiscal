@@ -18,7 +18,7 @@ jobs:
       run: cd EmissaoMicroservice
     
     - name: Instalando dependencias
-      run: dir
+      run: boss i                                                  
 
     - name: Compile EmissaoMicroservice
       run: ..\build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
