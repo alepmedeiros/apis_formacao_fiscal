@@ -14,16 +14,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Listar arquivos no diretório
-      run: dir
-      shell: cmd
-
-    - name: Executando o boss para instalar as dependecias
-      run: cd EmissaoMicroservice ;; c:\boss\boss.exe i
-      shell: cmd
+    - name: Entrando na pasta do projeto emissao
+      run: cd EmissaoMicroservice
+    
+    - name: Instalando dependencias
+      run: C:\boss\boss.exe i
 
     - name: Compile EmissaoMicroservice
-      run: .\build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
+      run: ..\build.bat "EmissaoMicroservice" "EmissaoMicroservice.dproj"
 
     - name: Compile AuthMicroservice
       run: build.bat "AuthMicroservice" "AuthMicroservice.dproj"
