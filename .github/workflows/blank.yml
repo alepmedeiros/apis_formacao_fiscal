@@ -20,6 +20,6 @@ jobs:
       
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 400 private_key
-          cat private_key
+          cat "$PRIVATE_KEY"
           ssh -i private_key ${USER_NAME}@${HOSTNAME} 'sudo systemctl stopt emissao.service && sudo systemctl start auth.service'
   
