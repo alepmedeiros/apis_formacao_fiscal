@@ -55,11 +55,12 @@ jobs:
         uses: actions/download-artifact@v4.1.8
         with:
           name: build-artifacts
+          path: ./artifacts/
 
       - name: Deploy das apis
         uses: nogsantos/scp-deploy@master
         with:
-          src: .
+          src: ./artifacts/
           host: ${{ secrets.HOST }}
           remote: ${{ secrets.SSH_DIR }}
           port: ${{ secrets.PORT }}
