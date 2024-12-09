@@ -15,9 +15,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ubuntu
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          port: 22
+          port: ${{ secrets.PORT }}
           script: |
             sudo systemctl start emissao.service
             sudo systemctl start auth.service
