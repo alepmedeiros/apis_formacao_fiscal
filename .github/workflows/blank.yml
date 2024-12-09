@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3                    
 
-    - name: Compile EmissaoMicroservice para validar
+    - name: Compile EmissaoMicroservice
       run: dir ;; cd EmissaoMicroservice ;; dir ;; boss i ;; c:\temp\build.bat . "EmissaoMicroservice.dproj"
 
   #   - name: Compile AuthMicroservice
