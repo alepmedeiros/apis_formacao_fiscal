@@ -26,13 +26,13 @@ jobs:
         boss i
         c:\temp\build.bat . "AuthMicroservice.dproj"
 
-  #   - name: Upload Build Artifacts
-  #     uses: actions/upload-artifact@v3
-  #     with:
-  #       name: build-artifacts
-  #       path: |
-  #         EmissaoMicroservice\bin\EmissaoMicroservice
-  #         AuthMicroservice\bin\AuthMicroservice
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: |
+          EmissaoMicroservice\bin\EmissaoMicroservice
+          AuthMicroservice\bin\AuthMicroservice
 
   # deploy:
   #   name: Deploy to EC2
