@@ -19,9 +19,8 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            hostname
-            ls -la
             sudo systemctl stop emissao.service
+            sudo systemctl stop auth.service
       
         # run: |
         #   echo "$PRIVATE_KEY" > ec2-key.pem && chmod 400 ec2-key.pem
