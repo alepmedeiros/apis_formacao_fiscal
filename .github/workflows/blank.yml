@@ -22,7 +22,7 @@ jobs:
 
     - name: Compile AuthMicroservice
       run: | 
-        cd uthMicroservice
+        cd AuthMicroservice
         boss i
         c:\temp\build.bat . "AuthMicroservice.dproj"
 
