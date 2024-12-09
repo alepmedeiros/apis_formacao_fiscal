@@ -20,15 +20,11 @@ jobs:
         boss i
         c:\temp\build.bat . "EmissaoMicroservice.dproj"
 
-    - name: Compile EmissaoMicroservice
-      run: |
-        dir
-
-  #   - name: Compile AuthMicroservice
-  #     run: | 
-  #       cd ..\AuthMicroservice
-  #       boss i
-  #       c:\temp\build.bat . "AuthMicroservice.dproj"
+    - name: Compile AuthMicroservice
+      run: | 
+        cd uthMicroservice
+        boss i
+        c:\temp\build.bat . "AuthMicroservice.dproj"
 
   #   - name: Upload Build Artifacts
   #     uses: actions/upload-artifact@v3
