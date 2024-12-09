@@ -11,14 +11,13 @@ jobs:
     runs-on: ubuntu-latest 
 
     steps:
-      - name: SSH # Apenas alterado o keu gerado manualemnte
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            sudo systemctl start emissao.service
-            sudo systemctl start auth.service
+      - name: Deploy EC2
+        uses: actions/checkout@v2
+        env:
+            PRIVATE_KEY: ${{ secrets.KEY }}
+            HOSTNAME: ${{secrets.HOST}}
+            USER_NAME: ${{secrets.USERNAME}}
+          run: |
+            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+            ssh -i private_key ${USER_NAME}@${HOSTNAME} 'sudo systemctl stopt emissao.service && sudo systemctl start auth.service'
   
