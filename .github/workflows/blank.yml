@@ -6,12 +6,41 @@ on:
       - master
 
 jobs:
+  build:
+    name: Build Projects
+    runs-on: [self-hosted, Windows, X64]  # Runner para compilação
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3                    
+
+    - name: Compile EmissaoMicroservice
+      run: |
+        cd EmissaoMicroservice 
+        boss i
+        c:\temp\build.bat . "EmissaoMicroservice.dproj"
+
+    - name: Compile AuthMicroservice
+      run: | 
+        cd AuthMicroservice
+        boss i
+        c:\temp\build.bat . "AuthMicroservice.dproj"
+
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v4.4.3
+      with:
+        name: build-artifacts
+        path: |
+          EmissaoMicroservice\bin\EmissaoMicroservice
+          AuthMicroservice\bin\AuthMicroservice
+
   deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest 
 
+    needs: build
     steps:
-      - name: executing remote ssh commands using ssh key
+      - name: Parando servicos
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.HOST }}
@@ -21,8 +50,29 @@ jobs:
           script: |
             sudo systemctl stop emissao.service
             sudo systemctl stop auth.service
-      
-        # run: |
-        #   echo "$PRIVATE_KEY" > ec2-key.pem && chmod 400 ec2-key.pem
-        #   ssh -o StrictHostKeyChecking=no -i ec2-key.pem ${USER_NAME}@${HOSTNAME} 'sudo systemctl stopt emissao.service && sudo systemctl start auth.service'
-  
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: build-artifacts
+
+      - name: Deploy das apis
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: .
+          host: ${{ secrets.HOST }}
+          remote: ${{ secrets.SSH_DIR }}
+          port: ${{ secrets.PORT }}
+          user: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+
+      - name: Inciando servicos
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            sudo systemctl start emissao.service
+            sudo systemctl start auth.service
