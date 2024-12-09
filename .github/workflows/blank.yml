@@ -21,7 +21,7 @@ jobs:
           script: |
             hostname
             ls -la
-            sudo systemctl stopt emissao.service
+            sudo systemctl stop emissao.service
       
         # run: |
         #   echo "$PRIVATE_KEY" > ec2-key.pem && chmod 400 ec2-key.pem
