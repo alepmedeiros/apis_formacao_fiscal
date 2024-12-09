@@ -57,10 +57,20 @@ jobs:
           name: build-artifacts
           path: ./artifacts/
 
-      - name: Deploy das apis
+      - name: Deploy da API Auth
         uses: nogsantos/scp-deploy@master
         with:
-          src: ./artifacts/
+          src: ./artifacts/AuthMicroservice/bin/AuthMicroservice
+          host: ${{ secrets.HOST }}
+          remote: ${{ secrets.SSH_DIR }}
+          port: ${{ secrets.PORT }}
+          user: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+
+      - name: Deploy da API Emissao
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./artifacts/EmissaoMicroservice/bin/EmissaoMicroservice
           host: ${{ secrets.HOST }}
           remote: ${{ secrets.SSH_DIR }}
           port: ${{ secrets.PORT }}
