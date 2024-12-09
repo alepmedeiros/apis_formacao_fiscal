@@ -20,5 +20,5 @@ jobs:
       
         run: |
           echo "${{ secrets.KEY }}" > ec2-key.pem && chmod 400 ec2-key.pem
-          ssh -i ec2-key.pem ${USER_NAME}@${HOSTNAME} 'sudo systemctl stopt emissao.service && sudo systemctl start auth.service'
+          ssh -o StrictHostKeyChecking=no -i ec2-key.pem ${USER_NAME}@${HOSTNAME} 'sudo systemctl stopt emissao.service && sudo systemctl start auth.service'
   
