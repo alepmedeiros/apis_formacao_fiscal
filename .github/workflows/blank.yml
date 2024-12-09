@@ -34,42 +34,42 @@ jobs:
           EmissaoMicroservice\bin\EmissaoMicroservice
           AuthMicroservice\bin\AuthMicroservice
 
-  # deploy:
-  #   name: Deploy to EC2
-  #   runs-on: ubuntu-latest  # Runner para deploy (pode ser GitHub-hosted)
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest  # Runner para deploy (pode ser GitHub-hosted)
 
-  #   needs: build  # O deploy só será executado após o build
-  #   steps:
-  #   - name: Configure AWS Credentials
-  #     uses: aws-actions/configure-aws-credentials@v1
-  #     with:
-  #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #       aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+    needs: build  # O deploy só será executado após o build
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
-  #   - name: Download Build Artifacts
-  #     uses: actions/download-artifact@v3
-  #     with:
-  #       name: build-artifacts
+    - name: Download Build Artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: build-artifacts
 
-  #   - name: Deploy EmissaoMicroservice
-  #     env:
-  #       AWS_HOST: ${{ secrets.AWS_HOST }}
-  #       SSH_KEY: ${{ secrets.SSH_KEY }}
-  #       AWS_PATH: ${{ secrets.AWS_PATH }}
-  #     run: |
-  #       echo "$SSH_KEY" > ssh_key.pem
-  #       chmod 400 ssh_key.pem
-  #       scp EmissaoMicroservice ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
-  #       ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop emissao.service && sudo systemctl start emissao.service"
+    - name: Deploy EmissaoMicroservice
+      env:
+        AWS_HOST: ${{ secrets.AWS_HOST }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        AWS_PATH: ${{ secrets.AWS_PATH }}
+      run: |
+        echo "$SSH_KEY" > ssh_key.pem
+        chmod 400 ssh_key.pem
+        scp EmissaoMicroservice ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
+        ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop emissao.service && sudo systemctl start emissao.service"
 
-  #   - name: Deploy AuthMicroservice
-  #     env:
-  #       AWS_HOST: ${{ secrets.AWS_HOST }}
-  #       SSH_KEY: ${{ secrets.SSH_KEY }}
-  #       AWS_PATH: ${{ secrets.AWS_PATH }}
-  #     run: |
-  #       echo "$SSH_KEY" > ssh_key.pem
-  #       chmod 400 ssh_key.pem
-  #       scp AuthMicroservice ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
-  #       ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop auth.service && sudo systemctl start auth.service"
+    - name: Deploy AuthMicroservice
+      env:
+        AWS_HOST: ${{ secrets.AWS_HOST }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        AWS_PATH: ${{ secrets.AWS_PATH }}
+      run: |
+        echo "$SSH_KEY" > ssh_key.pem
+        chmod 400 ssh_key.pem
+        scp AuthMicroservice ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
+        ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop auth.service && sudo systemctl start auth.service"

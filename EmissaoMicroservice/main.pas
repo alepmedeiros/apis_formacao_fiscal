@@ -19,6 +19,7 @@ type
     function CheckAuthentication(Token: String): Boolean;
 
     procedure Emitir(Req: THorseRequest; Res: THorseResponse);
+    procedure TesteActions(Req: THorseRequest; Res: THorseResponse);
   public
     class function New: TMain;
     procedure Registering;
@@ -79,12 +80,18 @@ begin
     .Use(Jhonson);
 
   THorse
-    .Post('/emitir', Emitir);
+    .Post('/emitir', Emitir)
+    .Get('/awsteste', TesteActions);;
 
   THorse.Listen(9001, procedure
   begin
     writeln(Format('Servidor rodando %s:%d', [THorse.Host, THorse.Port]));
   end);
+end;
+
+procedure TMain.TesteActions(Req: THorseRequest; Res: THorseResponse);
+begin
+  Res.Status(200).Send('Teste de validação remota');
 end;
 
 end.
