@@ -40,36 +40,69 @@ jobs:
 
     needs: build  # O deploy só será executado após o build
     steps:
-    - name: "Configure AWS Credentials"
-      uses: aws-actions/configure-aws-credentials@v4.0.2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+      - name: Parando servicos
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo systemctl stop emissao.service
+            sudo systemctl stop auth.service
 
-    - name: Download Build Artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: build-artifacts
+      - name: Deploy das aplicacoes
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          source: "EmissaoMicroservice/EmissaoMicroservice,AuthMicroservice/AuthMicroservice"
 
-    - name: Deploy EmissaoMicroservice
-      env:
-        AWS_HOST: ${{ secrets.AWS_HOST }}
-        SSH_KEY: ${{ secrets.SSH_KEY }}
-        AWS_PATH: ${{ secrets.AWS_PATH }}
-      run: |
-        echo "$SSH_KEY" > ssh_key.pem
-        chmod 400 ssh_key.pem
-        scp EmissaoMicroservice ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
-        ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop emissao.service && sudo systemctl start emissao.service"
+      - name: Iniciando servicos
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo systemctl start emissao.service
+            sudo systemctl start auth.service
 
-    - name: Deploy AuthMicroservice
-      env:
-        AWS_HOST: ${{ secrets.AWS_HOST }}
-        SSH_KEY: ${{ secrets.SSH_KEY }}
-        AWS_PATH: ${{ secrets.AWS_PATH }}
-      run: |
-        echo "$SSH_KEY" > ssh_key.pem
-        chmod 400 ssh_key.pem
-        scp AuthMicroservice ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
-        ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop auth.service && sudo systemctl start auth.service"
+          
+    # steps:
+    # - name: "Configure AWS Credentials"
+    #   uses: aws-actions/configure-aws-credentials@v4.0.2
+    #   with:
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     aws-region: us-east-2
+
+    # - name: Download Build Artifacts
+    #   uses: actions/download-artifact@v3
+    #   with:
+    #     name: build-artifacts
+
+    # - name: Deploy EmissaoMicroservice
+    #   env:
+    #     AWS_HOST: ${{ secrets.AWS_HOST }}
+    #     SSH_KEY: ${{ secrets.SSH_KEY }}
+    #     AWS_PATH: ${{ secrets.AWS_PATH }}
+    #   run: |
+    #     echo "$SSH_KEY" > ssh_key.pem
+    #     chmod 400 ssh_key.pem
+    #     scp EmissaoMicroservice ubuntu@$AWS_HOST:$AWS_PATH/EmissaoMicroservice
+    #     ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop emissao.service && sudo systemctl start emissao.service"
+
+    # - name: Deploy AuthMicroservice
+    #   env:
+    #     AWS_HOST: ${{ secrets.AWS_HOST }}
+    #     SSH_KEY: ${{ secrets.SSH_KEY }}
+    #     AWS_PATH: ${{ secrets.AWS_PATH }}
+    #   run: |
+    #     echo "$SSH_KEY" > ssh_key.pem
+    #     chmod 400 ssh_key.pem
+    #     scp AuthMicroservice ubuntu@$AWS_HOST:$AWS_PATH/AuthMicroservice
+    #     ssh -i ssh_key.pem ubuntu@$AWS_HOST "sudo systemctl stop auth.service && sudo systemctl start auth.service"
