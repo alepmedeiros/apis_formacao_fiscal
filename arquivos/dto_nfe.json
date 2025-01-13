@@ -1,0 +1,982 @@
+{
+	"infNFe": {
+		"versao": "string",
+		"Id": "string",
+		"ide": {
+			"cUF": 0,
+			"cNF": "string",
+			"natOp": "string",
+			"mod": 0,
+			"serie": 999,
+			"nNF": 1,
+			"dhEmi": "2019-08-24T14:15:22Z",
+			"dhSaiEnt": "2019-08-24T14:15:22Z",
+			"tpNF": 0,
+			"idDest": 0,
+			"cMunFG": "string",
+			"tpImp": 0,
+			"tpEmis": 0,
+			"cDV": 9,
+			"tpAmb": 0,
+			"finNFe": 0,
+			"indFinal": 0,
+			"indPres": 0,
+			"indIntermed": 0,
+			"procEmi": 0,
+			"verProc": "string",
+			"dhCont": "2019-08-24T14:15:22Z",
+			"xJust": "stringstringstr",
+			"NFref": [
+				{
+					"refNFe": "string",
+					"refNFeSig": "string",
+					"refNF": {
+						"cUF": 0,
+						"AAMM": "string",
+						"CNPJ": "string",
+						"mod": "string",
+						"serie": 999,
+						"nNF": 1
+					},
+					"refNFP": {
+						"cUF": 0,
+						"AAMM": "string",
+						"CNPJ": "string",
+						"CPF": "string",
+						"IE": "string",
+						"mod": "string",
+						"serie": 999,
+						"nNF": 1
+					},
+					"refCTe": "string",
+					"refECF": {
+						"mod": "string",
+						"nECF": 999,
+						"nCOO": 999999
+					}
+				}
+			]
+		},
+		"emit": {
+			"CNPJ": "string",
+			"CPF": "string",
+			"xNome": "string",
+			"xFant": "string",
+			"enderEmit": {
+				"xLgr": "string",
+				"nro": "string",
+				"xCpl": "string",
+				"xBairro": "string",
+				"cMun": "string",
+				"xMun": "string",
+				"UF": "string",
+				"CEP": "string",
+				"cPais": "string",
+				"xPais": "string",
+				"fone": "string"
+			},
+			"IE": "string",
+			"IEST": "string",
+			"IM": "string",
+			"CNAE": "string",
+			"CRT": 0
+		},
+		"dest": {
+			"CNPJ": "string",
+			"CPF": "string",
+			"idEstrangeiro": "string",
+			"xNome": "string",
+			"enderDest": {
+				"xLgr": "string",
+				"nro": "string",
+				"xCpl": "string",
+				"xBairro": "string",
+				"cMun": "string",
+				"xMun": "string",
+				"UF": "string",
+				"CEP": "string",
+				"cPais": "string",
+				"xPais": "string",
+				"fone": "string"
+			},
+			"indIEDest": 0,
+			"IE": "string",
+			"ISUF": "string",
+			"IM": "string",
+			"email": "string"
+		},
+		"retirada": {
+			"CNPJ": "string",
+			"CPF": "string",
+			"xNome": "string",
+			"xLgr": "string",
+			"nro": "string",
+			"xCpl": "string",
+			"xBairro": "string",
+			"cMun": "string",
+			"xMun": "string",
+			"UF": "string",
+			"CEP": "string",
+			"cPais": "string",
+			"xPais": "string",
+			"fone": "string",
+			"email": "string",
+			"IE": "string"
+		},
+		"entrega": {
+			"CNPJ": "string",
+			"CPF": "string",
+			"xNome": "string",
+			"xLgr": "string",
+			"nro": "string",
+			"xCpl": "string",
+			"xBairro": "string",
+			"cMun": "string",
+			"xMun": "string",
+			"UF": "string",
+			"CEP": "string",
+			"cPais": "string",
+			"xPais": "string",
+			"fone": "string",
+			"email": "string",
+			"IE": "string"
+		},
+		"autXML": [
+			{
+				"CNPJ": "string",
+				"CPF": "string"
+			}
+		],
+		"det": [
+			{
+				"nItem": 1,
+				"prod": {
+					"cProd": "string",
+					"cEAN": "string",
+					"cBarra": "string",
+					"xProd": "string",
+					"NCM": "string",
+					"NVE": [
+						"string"
+					],
+					"CEST": "string",
+					"indEscala": "string",
+					"CNPJFab": "string",
+					"cBenef": "string",
+					"gCred": [
+						{
+							"cCredPresumido": "string",
+							"pCredPresumido": 0,
+							"vCredPresumido": 0
+						}
+					],
+					"EXTIPI": "string",
+					"CFOP": "string",
+					"uCom": "string",
+					"qCom": 0,
+					"vUnCom": 0,
+					"vProd": 0,
+					"cEANTrib": "string",
+					"cBarraTrib": "string",
+					"uTrib": "string",
+					"qTrib": 0,
+					"vUnTrib": 0,
+					"vFrete": 0,
+					"vSeg": 0,
+					"vDesc": 0,
+					"vOutro": 0,
+					"indTot": 0,
+					"DI": [
+						{
+							"nDI": "string",
+							"dDI": "2019-08-24",
+							"xLocDesemb": "string",
+							"UFDesemb": "string",
+							"dDesemb": "2019-08-24",
+							"tpViaTransp": 0,
+							"vAFRMM": 0,
+							"tpIntermedio": 0,
+							"CNPJ": "string",
+							"CPF": "string",
+							"UFTerceiro": "string",
+							"cExportador": "string",
+							"adi": [
+								{
+									"nAdicao": 1,
+									"nSeqAdic": 1,
+									"cFabricante": "string",
+									"vDescDI": 0,
+									"nDraw": "string"
+								}
+							]
+						}
+					],
+					"detExport": [
+						{
+							"nDraw": "string",
+							"exportInd": {
+								"nRE": "string",
+								"chNFe": "string",
+								"qExport": 0
+							}
+						}
+					],
+					"xPed": "string",
+					"nItemPed": 999999,
+					"nFCI": "string",
+					"rastro": [
+						{
+							"nLote": "string",
+							"qLote": 0,
+							"dFab": "2019-08-24",
+							"dVal": "2019-08-24",
+							"cAgreg": "string"
+						}
+					],
+					"infProdNFF": {
+						"cProdFisco": "string",
+						"cOperNFF": "string"
+					},
+					"infProdEmb": {
+						"xEmb": "string",
+						"qVolEmb": 0,
+						"uEmb": "string"
+					},
+					"veicProd": {
+						"tpOp": 0,
+						"chassi": "string",
+						"cCor": "stri",
+						"xCor": "string",
+						"pot": "stri",
+						"cilin": "stri",
+						"pesoL": "string",
+						"pesoB": "string",
+						"nSerie": "string",
+						"tpComb": "st",
+						"nMotor": "string",
+						"CMT": "string",
+						"dist": "stri",
+						"anoMod": 9999,
+						"anoFab": 9999,
+						"tpPint": "s",
+						"tpVeic": 99,
+						"espVeic": 9,
+						"VIN": "s",
+						"condVeic": 0,
+						"cMod": "string",
+						"cCorDENATRAN": "st",
+						"lota": 999,
+						"tpRest": 0
+					},
+					"med": {
+						"cProdANVISA": "string",
+						"xMotivoIsencao": "string",
+						"vPMC": 0
+					},
+					"arma": [
+						{
+							"tpArma": 0,
+							"nSerie": "string",
+							"nCano": "string",
+							"descr": "string"
+						}
+					],
+					"comb": {
+						"cProdANP": 999999999,
+						"descANP": "string",
+						"pGLP": 100,
+						"pGNn": 100,
+						"pGNi": 100,
+						"vPart": 0,
+						"CODIF": "string",
+						"qTemp": 0,
+						"UFCons": "string",
+						"CIDE": {
+							"qBCProd": 0,
+							"vAliqProd": 0,
+							"vCIDE": 0
+						},
+						"encerrante": {
+							"nBico": 999,
+							"nBomba": 999,
+							"nTanque": 999,
+							"vEncIni": 0,
+							"vEncFin": 0
+						},
+						"pBio": 0,
+						"origComb": [
+							{
+								"indImport": 0,
+								"cUFOrig": 0,
+								"pOrig": 0
+							}
+						]
+					},
+					"nRECOPI": "string"
+				},
+				"imposto": {
+					"vTotTrib": 0,
+					"ICMS": {
+						"ICMS00": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"vBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"pFCP": 0,
+							"vFCP": 0
+						},
+						"ICMS02": {
+							"orig": 0,
+							"CST": "string",
+							"qBCMono": 0,
+							"adRemICMS": 0,
+							"vICMSMono": 0
+						},
+						"ICMS10": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"vBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"vBCFCP": 0,
+							"pFCP": 0,
+							"vFCP": 0,
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"vICMSSTDeson": 0,
+							"motDesICMSST": 0
+						},
+						"ICMS15": {
+							"orig": 0,
+							"CST": "string",
+							"qBCMono": 0,
+							"adRemICMS": 0,
+							"vICMSMono": 0,
+							"qBCMonoReten": 0,
+							"adRemICMSReten": 0,
+							"vICMSMonoReten": 0,
+							"pRedAdRem": 100,
+							"motRedAdRem": 0
+						},
+						"ICMS20": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"pRedBC": 0,
+							"vBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"vBCFCP": 0,
+							"pFCP": 0,
+							"vFCP": 0,
+							"vICMSDeson": 0,
+							"motDesICMS": 0,
+							"indDeduzDeson": 0
+						},
+						"ICMS30": {
+							"orig": 0,
+							"CST": "string",
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"vICMSDeson": 0,
+							"motDesICMS": 0,
+							"indDeduzDeson": 0
+						},
+						"ICMS40": {
+							"orig": 0,
+							"CST": "string",
+							"vICMSDeson": 0,
+							"motDesICMS": 0,
+							"indDeduzDeson": 0
+						},
+						"ICMS51": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"pRedBC": 0,
+							"cBenefRBC": "string",
+							"vBC": 0,
+							"pICMS": 0,
+							"vICMSOp": 0,
+							"pDif": 100,
+							"vICMSDif": 0,
+							"vICMS": 0,
+							"vBCFCP": 0,
+							"pFCP": 0,
+							"vFCP": 0,
+							"pFCPDif": 0,
+							"vFCPDif": 0,
+							"vFCPEfet": 0
+						},
+						"ICMS53": {
+							"orig": 0,
+							"CST": "string",
+							"qBCMono": 0,
+							"adRemICMS": 0,
+							"vICMSMonoOp": 0,
+							"pDif": 100,
+							"vICMSMonoDif": 0,
+							"vICMSMono": 0,
+							"qBCMonoDif": 0,
+							"adRemICMSDif": 0
+						},
+						"ICMS60": {
+							"orig": 0,
+							"CST": "string",
+							"vBCSTRet": 0,
+							"pST": 0,
+							"vICMSSubstituto": 0,
+							"vICMSSTRet": 0,
+							"vBCFCPSTRet": 0,
+							"pFCPSTRet": 0,
+							"vFCPSTRet": 0,
+							"pRedBCEfet": 0,
+							"vBCEfet": 0,
+							"pICMSEfet": 0,
+							"vICMSEfet": 0
+						},
+						"ICMS61": {
+							"orig": 0,
+							"CST": "string",
+							"qBCMonoRet": 0,
+							"adRemICMSRet": 0,
+							"vICMSMonoRet": 0
+						},
+						"ICMS70": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"pRedBC": 0,
+							"vBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"vBCFCP": 0,
+							"pFCP": 0,
+							"vFCP": 0,
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"vICMSDeson": 0,
+							"motDesICMS": 0,
+							"indDeduzDeson": 0,
+							"vICMSSTDeson": 0,
+							"motDesICMSST": 0
+						},
+						"ICMS90": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"vBC": 0,
+							"pRedBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"vBCFCP": 0,
+							"pFCP": 0,
+							"vFCP": 0,
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"vICMSDeson": 0,
+							"motDesICMS": 0,
+							"indDeduzDeson": 0,
+							"vICMSSTDeson": 0,
+							"motDesICMSST": 0
+						},
+						"ICMSPart": {
+							"orig": 0,
+							"CST": "string",
+							"modBC": 0,
+							"vBC": 0,
+							"pRedBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"pBCOp": 0,
+							"UFST": "string"
+						},
+						"ICMSST": {
+							"orig": 0,
+							"CST": "string",
+							"vBCSTRet": 0,
+							"pST": 0,
+							"vICMSSubstituto": 0,
+							"vICMSSTRet": 0,
+							"vBCFCPSTRet": 0,
+							"pFCPSTRet": 0,
+							"vFCPSTRet": 0,
+							"vBCSTDest": 0,
+							"vICMSSTDest": 0,
+							"pRedBCEfet": 0,
+							"vBCEfet": 0,
+							"pICMSEfet": 0,
+							"vICMSEfet": 0
+						},
+						"ICMSSN101": {
+							"orig": 0,
+							"CSOSN": "string",
+							"pCredSN": 0,
+							"vCredICMSSN": 0
+						},
+						"ICMSSN102": {
+							"orig": 0,
+							"CSOSN": "string"
+						},
+						"ICMSSN201": {
+							"orig": 0,
+							"CSOSN": "string",
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"pCredSN": 0,
+							"vCredICMSSN": 0
+						},
+						"ICMSSN202": {
+							"orig": 0,
+							"CSOSN": "string",
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0
+						},
+						"ICMSSN500": {
+							"orig": 0,
+							"CSOSN": "string",
+							"vBCSTRet": 0,
+							"pST": 0,
+							"vICMSSubstituto": 0,
+							"vICMSSTRet": 0,
+							"vBCFCPSTRet": 0,
+							"pFCPSTRet": 0,
+							"vFCPSTRet": 0,
+							"pRedBCEfet": 0,
+							"vBCEfet": 0,
+							"pICMSEfet": 0,
+							"vICMSEfet": 0
+						},
+						"ICMSSN900": {
+							"orig": 0,
+							"CSOSN": "string",
+							"modBC": 0,
+							"vBC": 0,
+							"pRedBC": 0,
+							"pICMS": 0,
+							"vICMS": 0,
+							"modBCST": 0,
+							"pMVAST": 0,
+							"pRedBCST": 0,
+							"vBCST": 0,
+							"pICMSST": 0,
+							"vICMSST": 0,
+							"vBCFCPST": 0,
+							"pFCPST": 0,
+							"vFCPST": 0,
+							"pCredSN": 0,
+							"vCredICMSSN": 0
+						}
+					},
+					"IPI": {
+						"CNPJProd": "string",
+						"cSelo": "string",
+						"qSelo": 0,
+						"cEnq": "str",
+						"IPITrib": {
+							"CST": "string",
+							"vBC": 0,
+							"pIPI": 0,
+							"qUnid": 0,
+							"vUnid": 0,
+							"vIPI": 0
+						},
+						"IPINT": {
+							"CST": "string"
+						}
+					},
+					"II": {
+						"vBC": 0,
+						"vDespAdu": 0,
+						"vII": 0,
+						"vIOF": 0
+					},
+					"ISSQN": {
+						"vBC": 0,
+						"vAliq": 0,
+						"vISSQN": 0,
+						"cMunFG": "string",
+						"cListServ": "string",
+						"vDeducao": 0,
+						"vOutro": 0,
+						"vDescIncond": 0,
+						"vDescCond": 0,
+						"vISSRet": 0,
+						"indISS": 0,
+						"cServico": "string",
+						"cMun": "string",
+						"cPais": "string",
+						"nProcesso": "string",
+						"indIncentivo": 0
+					},
+					"PIS": {
+						"PISAliq": {
+							"CST": "string",
+							"vBC": 0,
+							"pPIS": 0,
+							"vPIS": 0
+						},
+						"PISQtde": {
+							"CST": "string",
+							"qBCProd": 0,
+							"vAliqProd": 0,
+							"vPIS": 0
+						},
+						"PISNT": {
+							"CST": "string"
+						},
+						"PISOutr": {
+							"CST": "string",
+							"vBC": 0,
+							"pPIS": 0,
+							"qBCProd": 0,
+							"vAliqProd": 0,
+							"vPIS": 0
+						}
+					},
+					"PISST": {
+						"vBC": 0,
+						"pPIS": 0,
+						"qBCProd": 0,
+						"vAliqProd": 0,
+						"vPIS": 0,
+						"indSomaPISST": 0
+					},
+					"COFINS": {
+						"COFINSAliq": {
+							"CST": "string",
+							"vBC": 0,
+							"pCOFINS": 0,
+							"vCOFINS": 0
+						},
+						"COFINSQtde": {
+							"CST": "string",
+							"qBCProd": 0,
+							"vAliqProd": 0,
+							"vCOFINS": 0
+						},
+						"COFINSNT": {
+							"CST": "string"
+						},
+						"COFINSOutr": {
+							"CST": "string",
+							"vBC": 0,
+							"pCOFINS": 0,
+							"qBCProd": 0,
+							"vAliqProd": 0,
+							"vCOFINS": 0
+						}
+					},
+					"COFINSST": {
+						"vBC": 0,
+						"pCOFINS": 0,
+						"qBCProd": 0,
+						"vAliqProd": 0,
+						"vCOFINS": 0,
+						"indSomaCOFINSST": 0
+					},
+					"ICMSUFDest": {
+						"vBCUFDest": 0,
+						"vBCFCPUFDest": 0,
+						"pFCPUFDest": 0,
+						"pICMSUFDest": 0,
+						"pICMSInter": 0,
+						"pICMSInterPart": 0,
+						"vFCPUFDest": 0,
+						"vICMSUFDest": 0,
+						"vICMSUFRemet": 0
+					}
+				},
+				"impostoDevol": {
+					"pDevol": 100,
+					"IPI": {
+						"vIPIDevol": 0
+					}
+				},
+				"infAdProd": "string",
+				"obsItem": {
+					"obsCont": {
+						"xCampo": "string",
+						"xTexto": "string"
+					},
+					"obsFisco": {
+						"xCampo": "string",
+						"xTexto": "string"
+					}
+				}
+			}
+		],
+		"total": {
+			"ICMSTot": {
+				"vBC": 0,
+				"vICMS": 0,
+				"vICMSDeson": 0,
+				"vFCPUFDest": 0,
+				"vICMSUFDest": 0,
+				"vICMSUFRemet": 0,
+				"vFCP": 0,
+				"vBCST": 0,
+				"vST": 0,
+				"vFCPST": 0,
+				"vFCPSTRet": 0,
+				"qBCMono": 0,
+				"vICMSMono": 0,
+				"qBCMonoReten": 0,
+				"vICMSMonoReten": 0,
+				"qBCMonoRet": 0,
+				"vICMSMonoRet": 0,
+				"vProd": 0,
+				"vFrete": 0,
+				"vSeg": 0,
+				"vDesc": 0,
+				"vII": 0,
+				"vIPI": 0,
+				"vIPIDevol": 0,
+				"vPIS": 0,
+				"vCOFINS": 0,
+				"vOutro": 0,
+				"vNF": 0,
+				"vTotTrib": 0
+			},
+			"ISSQNtot": {
+				"vServ": 0,
+				"vBC": 0,
+				"vISS": 0,
+				"vPIS": 0,
+				"vCOFINS": 0,
+				"dCompet": "2019-08-24",
+				"vDeducao": 0,
+				"vOutro": 0,
+				"vDescIncond": 0,
+				"vDescCond": 0,
+				"vISSRet": 0,
+				"cRegTrib": 0
+			},
+			"retTrib": {
+				"vRetPIS": 0,
+				"vRetCOFINS": 0,
+				"vRetCSLL": 0,
+				"vBCIRRF": 0,
+				"vIRRF": 0,
+				"vBCRetPrev": 0,
+				"vRetPrev": 0
+			}
+		},
+		"transp": {
+			"modFrete": 0,
+			"transporta": {
+				"CNPJ": "string",
+				"CPF": "string",
+				"xNome": "string",
+				"IE": "string",
+				"xEnder": "string",
+				"xMun": "string",
+				"UF": "string"
+			},
+			"retTransp": {
+				"vServ": 0,
+				"vBCRet": 0,
+				"pICMSRet": 0,
+				"vICMSRet": 0,
+				"CFOP": "string",
+				"cMunFG": "string"
+			},
+			"veicTransp": {
+				"placa": "string",
+				"UF": "string",
+				"RNTC": "string"
+			},
+			"reboque": [
+				{
+					"placa": "string",
+					"UF": "string",
+					"RNTC": "string"
+				}
+			],
+			"vagao": "string",
+			"balsa": "string",
+			"vol": [
+				{
+					"qVol": 0,
+					"esp": "string",
+					"marca": "string",
+					"nVol": "string",
+					"pesoL": 0,
+					"pesoB": 0,
+					"lacres": [
+						{
+							"nLacre": "string"
+						}
+					]
+				}
+			]
+		},
+		"cobr": {
+			"fat": {
+				"nFat": "string",
+				"vOrig": 0,
+				"vDesc": 0,
+				"vLiq": 0
+			},
+			"dup": [
+				{
+					"nDup": "string",
+					"dVenc": "2019-08-24",
+					"vDup": 0
+				}
+			]
+		},
+		"pag": {
+			"detPag": [
+				{
+					"indPag": 0,
+					"tPag": "string",
+					"xPag": "string",
+					"vPag": 0,
+					"dPag": "2019-08-24",
+					"CNPJPag": "string",
+					"UFPag": "string",
+					"card": {
+						"tpIntegra": 0,
+						"CNPJ": "string",
+						"tBand": "string",
+						"cAut": "string",
+						"CNPJReceb": "string",
+						"idTermPag": "string"
+					}
+				}
+			],
+			"vTroco": 0
+		},
+		"infIntermed": {
+			"CNPJ": "string",
+			"idCadIntTran": "string"
+		},
+		"infAdic": {
+			"infAdFisco": "string",
+			"infCpl": "string",
+			"obsCont": [
+				{
+					"xCampo": "string",
+					"xTexto": "string"
+				}
+			],
+			"obsFisco": [
+				{
+					"xCampo": "string",
+					"xTexto": "string"
+				}
+			],
+			"procRef": [
+				{
+					"nProc": "string",
+					"indProc": 0,
+					"tpAto": "string"
+				}
+			]
+		},
+		"exporta": {
+			"UFSaidaPais": "string",
+			"xLocExporta": "string",
+			"xLocDespacho": "string"
+		},
+		"compra": {
+			"xNEmp": "string",
+			"xPed": "string",
+			"xCont": "string"
+		},
+		"cana": {
+			"safra": "string",
+			"ref": "string",
+			"forDia": [
+				{
+					"dia": 1,
+					"qtde": 0
+				}
+			],
+			"qTotMes": 0,
+			"qTotAnt": 0,
+			"qTotGer": 0,
+			"deduc": [
+				{
+					"xDed": "string",
+					"vDed": 0
+				}
+			],
+			"vFor": 0,
+			"vTotDed": 0,
+			"vLiqFor": 0
+		},
+		"infRespTec": {
+			"CNPJ": "string",
+			"xContato": "string",
+			"email": "string",
+			"fone": "string",
+			"idCSRT": 99,
+			"hashCSRT": "string"
+		},
+		"infSolicNFF": {
+			"xSolic": "string"
+		}
+	},
+	"infNFeSupl": {
+		"qrCode": "stringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstri",
+		"urlChave": "stringstringstringstr"
+	},
+	"ambiente": "homologacao",
+	"referencia": "string"
+}
