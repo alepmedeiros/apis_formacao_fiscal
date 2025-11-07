@@ -1295,7 +1295,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos NFe'
-              TabOrder = 326
+              TabOrder = 339
             end
             object Label39: TLabel
               AutoSize = True
@@ -1306,7 +1306,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos Cancelamento'
-              TabOrder = 327
+              TabOrder = 340
             end
             object sbPathCan: TSpeedButton
               Position.X = 247.000000000000000000
@@ -1327,7 +1327,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos CC-e - Carta de Corre'#231#227'o'
-              TabOrder = 329
+              TabOrder = 342
             end
             object sbPathCCe: TSpeedButton
               Position.X = 247.000000000000000000
@@ -1348,7 +1348,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos Inutiliza'#231#227'o'
-              TabOrder = 331
+              TabOrder = 344
             end
             object sbPathInu: TSpeedButton
               Position.X = 247.000000000000000000
@@ -1369,7 +1369,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos DPEC'
-              TabOrder = 333
+              TabOrder = 346
             end
             object sbPathDPEC: TSpeedButton
               Position.X = 247.000000000000000000
@@ -1390,7 +1390,7 @@ object frmACBrNFe: TfrmACBrNFe
               Size.PlatformDefault = False
               TextSettings.WordWrap = False
               Text = 'Pasta Arquivos Evento'
-              TabOrder = 335
+              TabOrder = 348
             end
             object sbPathEvento: TSpeedButton
               Position.X = 247.000000000000000000
@@ -1946,8 +1946,8 @@ object frmACBrNFe: TfrmACBrNFe
           Size.Height = 130.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
-          Viewport.Width = 249.000000000000000000
-          Viewport.Height = 130.000000000000000000
+          Viewport.Width = 245.000000000000000000
+          Viewport.Height = 126.000000000000000000
         end
       end
     end
@@ -2421,8 +2421,8 @@ object frmACBrNFe: TfrmACBrNFe
           Size.Height = 427.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 585.000000000000000000
-          Viewport.Height = 427.000000000000000000
+          Viewport.Width = 581.000000000000000000
+          Viewport.Height = 423.000000000000000000
         end
       end
       object tsRespostaXML: TTabItem
@@ -2472,8 +2472,8 @@ object frmACBrNFe: TfrmACBrNFe
           Size.Height = 427.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 585.000000000000000000
-          Viewport.Height = 427.000000000000000000
+          Viewport.Width = 581.000000000000000000
+          Viewport.Height = 423.000000000000000000
         end
       end
       object TabSheet9: TTabItem
@@ -2527,8 +2527,8 @@ object frmACBrNFe: TfrmACBrNFe
           Size.Height = 427.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 585.000000000000000000
-          Viewport.Height = 427.000000000000000000
+          Viewport.Width = 581.000000000000000000
+          Viewport.Height = 423.000000000000000000
         end
       end
       object tsDados: TTabItem
@@ -2556,8 +2556,8 @@ object frmACBrNFe: TfrmACBrNFe
           Size.Height = 427.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 585.000000000000000000
-          Viewport.Height = 427.000000000000000000
+          Viewport.Width = 581.000000000000000000
+          Viewport.Height = 423.000000000000000000
         end
       end
     end

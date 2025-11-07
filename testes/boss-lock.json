@@ -1,0 +1,14 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2025-01-14T15:10:13.4867334-03:00",
+	"installedModules": {
+		"https://github.com/gabrielbaltazar/gbjson": {
+			"name": "gbjson",
+			"version": "1.1.2",
+			"hash": "7393d9f407542ce6bfd95def9b4a04fd",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}
